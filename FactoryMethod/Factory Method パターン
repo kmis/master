@@ -1,0 +1,71 @@
+Factory Method パターン
+
+インスタンスをTemplate Method パターンを使って生成したもの。
+インスタンスの作り方を基底クラスで定め、具体的なクラス名までは定めない。具体的な肉付けは、全てサブクラスで行う。
+これによって、インスタンス生成のための枠組みと、実際のインスタンス生成のクラスとを分けて考えることができる。
+
+サンプルプログラム
+5つのクラスからIDカードを作る工場を考えてみる。
+Productクラス、Factoryクラスはインスタンス生成のための枠組み。
+IDCardクラス、IDCardFactoryクラスは、実際の肉付けを行う。
+Mainクラスはテストクラス。
+
+クラス一覧
+パッケージ  名前
+framework  Product        抽象メソッドuse のみ定義されている抽象クラス
+〃         Factory        createメソッドを実装しているクラス
+idcard     IDCard         useメソッドを実装しているクラス
+〃         IDCardFactory  createProduct, registerProduct メソッドを実装しているクラス
+無名       Main           テストクラス
+
+・Productクラス
+frameworkパッケージで、製品を表現したクラス。このクラスでは「製品はuse（使える）もの」と規定している。
+
+・Factoryクラス
+frameworkパッケージで、Template Methodパターンが使われている。抽象メソッド createProduct で「製品を作り」、作った製品を抽象メソッド registerProduct で「登録」する。
+このクラスでは、工場とは「createメソッドで Product のインスタンスを生成するもの」と規定する。そして、createメソッドは「createProduct で製品を作って、registerProduct で登録する」という手順として実装されている。
+
+・IDCardクラス
+IDカードを表す。
+
+・IDCardFactoryクラス
+createProductで、IDCardのインスタンスを生成することで、「製品を作る」ことを実現している。
+registerProductでは、IDCardのowner（所有者）をownersフィールドに追加して、「登録」という機能を実現している。
+
+・Mainクラス
+framewordパッケージとidcardパッケージを利用して実際のIDCardを作り、使う。
+
+・Factroy Method パターンの要素
+・製品(Product)
+フレームワーク側で、このパターンで生成されるインスタンスが持つべきインターフェイスを定める抽象クラス。
+・作成者(Creater)
+フレームワーク側で、Prodactを生成する抽象クラス。インスタンス生成のメソッドを呼び出せば、Productが生成される。
+new による実際のインスタンス生成を、インスタンス生成のためのメソッド呼び出しに代えることで、具体的なクラス名による束縛から基底クラスを開放している。
+・具体的製品(IDCard)
+具体的な肉付けをする側で、具体的な製品を定める。
+・具体的作成者(IDCardFactory)
+具体的な肉付けをする側で、具体的な製品を作るクラスを定める。
+
+・インスタンスを生成するメソッドの実装方法
+1.抽象メソッドにする
+抽象メソッドにし、サブクラスでこのメソッドを実装させる。
+  abstract class Factory {
+      public abstract Product createProduct(String name);
+      ・・・
+  }
+2.デフォルトの実装を用意する
+デフォルトの実装を用意しておくことで、サブクラスで実装しなかった場合に、その実装が使われる。
+ただし、この場合にはProductクラスを直接 new しているので、Productクラスを抽象クラスにすることができない。
+class Factory {
+	public Product createProduct(String name) {
+		return new Product(name);
+	}
+	・・・
+}
+3.エラーにする
+デフォルトの実装をエラーにすることで、サブクラスで実装しなかった場合に、実行時にエラーになる。（エラーになって実装されていないことを教えてくれる）
+class Factory {
+	public Product createProduct(String name) {
+		throw new FactoryMethodRuntimeException();
+	}
+}
