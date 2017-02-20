@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="modal.css">
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="modal.js"></script>
+</head>
+<body>
+  <div id="modal_accept_01" class="modal_content">
+    <p>モーダルウィンドウ2</p>
+    <p>受付画面</p>
+      <div class="storeName">スナフキン2</div>
+      <div class="description">大人</div>
+      <div class="boxContainer">
+        <div class="person_box person_selected" style="background-color: #0FF">1</div>
+        <div class="person_box">2</div>
+        <div class="person_box">3</div>
+        <div class="person_box">4</div>
+        <div class="person_box">5</div>
+        <div class="person_box">6</div>
+        <div class="person_box">7</div>
+        <div class="person_box">8</div>
+        <div class="person_box">9</div>
+        <div class="person_box">10</div>
+      </div>
+      <div class="description">子供</div>
+      <div class="boxContainer">
+        <div class="child_box child_selected" style="background-color: #0FF">0</div>
+        <div class="child_box">1</div>
+        <div class="child_box">2</div>
+        <div class="child_box">3</div>
+        <div class="child_box">4</div>
+        <div class="child_box">5</div>
+        <div class="child_box">6</div>
+        <div class="child_box">7</div>
+        <div class="child_box">8</div>
+        <div class="child_box">9</div>
+      </div>
+    <p>
+      <input type="button" id="modal_close" class="button_back_list" value="やめる" />
+      <input type="button" id="print_01" class="modal_accept button_accept" data-target="modal_accept_01" value="受付する" />
+    </p>
+  </div>
+  <div id="modal_accept_02" class="modal_content">
+    <p>モーダルウィンドウ2</p>
+    <p>受付画面</p>
+      <div class="storeName">ムーミン2</div>
+      <div class="map">地図</div>
+      <div class="open">営業時間 9:00〜21:00</div>
+      <div class="tel">000-0000-0000</div>
+      <div class="description">説明</div>
+    <p>
+      <input type="button" id="modal_close" class="button_back_list" value="やめる" />
+    </p>
+  </div>
+  <div id="modal_accept_03" class="modal_content">
+    <p>モーダルウィンドウ2</p>
+    <p>受付画面</p>
+      <div class="storeName">フローレン2</div>
+      <div class="map">地図</div>
+      <div class="open">営業時間 9:00〜21:00</div>
+      <div class="tel">000-0000-0000</div>
+      <div class="description">説明</div>
+    <p>
+      <input type="button" id="modal_close" class="button_back_list" value="やめる" />
+    </p>
+  </div>
+
+
+  <div id="modal_content_01" class="modal_content">
+  	<p>モーダルウィンドウ</p>
+  	<p>「閉じる」か「背景」をクリックするとモーダルを終了する</p>
+  	  <div class="storeName">スナフキン</div>
+  	  <div class="map">地図</div>
+  	  <div class="open">営業時間 9:00〜21:00</div>
+  	  <div class="tel">000-0000-0000</div>
+  	  <div class="description">説明</div>
+  	<p>
+      <input type="button" id="modal_close" class="button_back_list" value="一覧に戻る" />
+      <input type="button" class="modal_accept button_accept" data-target="modal_accept_01" value="受付する" />
+    </p>
+  </div>
+  <div id="modal_content_02" class="modal_content">
+    <p>モーダルウィンドウ</p>
+    <p>「閉じる」か「背景」をクリックするとモーダルを終了する</p>
+      <div class="storeName">ムーミン</div>
+      <div class="map">地図</div>
+      <div class="open">営業時間 9:00〜21:00</div>
+      <div class="tel">000-0000-0000</div>
+      <div class="description">説明</div>
+    <p>
+      <input type="button" id="modal_close" class="button_back_list" value="一覧に戻る" />
+      <input type="button" class="modal_accept button_accept" data-target="modal_accept_02" value="受付する" />
+    </p>
+  </div>
+  <div id="modal_content_03" class="modal_content">
+    <p>モーダルウィンドウ</p>
+    <p>「閉じる」か「背景」をクリックするとモーダルを終了する</p>
+      <div class="storeName">フローレン</div>
+      <div class="map">地図</div>
+      <div class="open">営業時間 9:00〜21:00</div>
+      <div class="tel">000-0000-0000</div>
+      <div class="description">説明</div>
+    <p>
+      <input type="button" id="modal_close" class="button_back_list" value="一覧に戻る" />
+      <input type="button" class="modal_accept button_accept" data-target="modal_accept_03" value="受付する" />
+    </p>
+  </div>
+
+
+  <div class="stores">
+  	<div class="store">
+  	  <div class="storeName">スナフキン</div>
+  	  <div class="map">地図</div>
+  	  <div class="open">営業時間 9:00〜21:00</div>
+  	  <div class="tel">000-0000-0000</div>
+  	  <div class="description">説明</div>
+  	  <input type="button" class="modal_store_detail" data-target="modal_content_01" value="受付する" />
+  	</div>
+  	<div class="store">
+  	  <div class="storeName">ムーミン</div>
+  	  <div class="map">地図</div>
+  	  <div class="open">営業時間 9:00〜21:00</div>
+  	  <div class="tel">000-0000-0000</div>
+  	  <div class="description">説明</div>
+  	  <input type="button" class="modal_store_detail" data-target="modal_content_02" value="受付する" />
+  	</div>
+  	<div class="store">
+  	  <div class="storeName">フローレン</div>
+  	  <div class="map">地図</div>
+  	  <div class="open">営業時間 9:00〜21:00</div>
+  	  <div class="tel">000-0000-0000</div>
+  	  <div class="description">説明</div>
+  	  <input type="button" class="modal_store_detail" data-target="modal_content_03" value="受付する" />
+  	</div>
+  </div>
+</body>
+</html>
