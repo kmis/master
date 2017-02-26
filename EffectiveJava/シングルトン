@@ -1,0 +1,52 @@
+シングルトン
+
+private コンストラクタか enum 型でシングルトン特性を矯正する
+
+・public final のフィールドによるシングルトン
+public class Elvis {
+	public static final Elvis INSTANCE = new Elvis();
+	private Elvis() {
+	}
+
+	public void leaveTheBuilding() {
+
+	}
+}
+
+private のコンストラクタは、public static final のフィールドである Elvis.INSTANCE を初期化するために、1度だけ呼ばれる。
+
+利点：宣言によりそのクラスがシングルトンであることが明白になっていること。
+つまり、public static のフィールドが final なので、そのフィールドは常に同じオブジェクト参照を保持する。
+
+注意点：AccessibleObject.setAccessible メソッドを使用して、リフレクションによりその private のコンストラクタを呼び出すことができる。
+この攻撃を防ぐ必要があれば、2つ目のインスタンスが生成されようとした時に、コンストラクタを修正して例外をスローするようにする。
+
+・static ファクトリーメソッドによるシングルトン
+public class Elvis {
+	private static final Elvis INSTANCE = new Elvis();
+	private Elvia() {
+	}
+	public static Elvis getInstance() {
+		return INSTANCE;
+	}
+
+	public void leaveTheBuilding() {
+
+	}
+}
+
+利点1：APIを変更することなく、そのクラスがシングルトンであるべきかそうでないかを変更できる柔軟性がある。例えば、メソッドを呼び出しているスレッドごとに別々のインスタンスを返すように修正することが容易に行える。
+
+利点2：ジェネリック型に関係する
+
+これらの利点は求められていないため、public のフィールドによる方法がより単純。
+
+・enumシングルトン
+public enum Elvis {
+	INSTANCE;
+
+	public void leaveTheBuilding() {
+	}
+}
+
+機能的には public のフィールドによる方法と同じ。
