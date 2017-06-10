@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/signage.css">
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="modal.js"></script>
+<!-- <script src="abe.js"></script> -->
+<!-- <script type="text/javascript">
+  alert('abe');
+</script> -->
+</head>
+<body>
+
+  <div id="printer_select_box">
+    <div id="printer_select">
+      <p>プリンタ選択</p>
+      <select>
+        <option value="01">スター精密・据え置き80mm</option>
+        <option value="03">スター精密・据え置き58mm</option>
+        <option value="05">スター精密・モバイル</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="stores">
+    <div class="store">
+      <div class="storeName">スナフキン</div>
+      <div class="map">地図</div>
+      <div class="open">営業時間 9:00〜21:00</div>
+      <div class="tel">000-0000-0000</div>
+      <div class="description">説明</div>
+      大人：<input type="text" name="person" class="person_text"><br>
+      子供：<input type="text" name="child_person" class="child_person_text"><br>
+      <input type="button" class="modal_store_detail" data-target="modal_content_01" value="発券" />
+    </div>
+    <div class="store">
+      <div class="storeName">ムーミン</div>
+      <div class="map">地図</div>
+      <div class="open">営業時間 9:00〜21:00</div>
+      <div class="tel">000-0000-0000</div>
+      <div class="description">説明</div>
+      大人：<input type="text" name="person" class="person_text"><br>
+      子供：<input type="text" name="child_person" class="child_person_text"><br>
+      <input type="button" class="modal_store_detail" data-target="modal_content_02" value="受付する" />
+    </div>
+    <div class="store">
+      <div class="storeName">フローレン</div>
+      <div class="map">地図</div>
+      <div class="open">営業時間 9:00〜21:00</div>
+      <div class="tel">000-0000-0000</div>
+      <div class="description">説明</div>
+      大人：<input type="text" name="person" class="person_text"><br>
+      子供：<input type="text" name="child_person" class="child_person_text"><br>
+      <input type="button" class="modal_store_detail" data-target="modal_content_03" value="受付する" />
+    </div>
+    <div class="store">
+      <div class="storeName">ミー</div>
+      <div class="map">地図</div>
+      <div class="open">営業時間 9:00〜21:00</div>
+      <div class="tel">000-0000-0000</div>
+      <div class="description">説明</div>
+      大人：<input type="text" name="person" class="person_text"><br>
+      子供：<input type="text" name="child_person" class="child_person_text"><br>
+      <input type="button" class="modal_store_detail" data-target="modal_content_04" value="受付する" />
+    </div>
+
+    <div class="store">
+      <div class="storeName">オビ=ワン・ケノービ</div>
+      <div class="map">地図</div>
+      <div class="open">営業時間 9:00〜21:00</div>
+      <div class="tel">000-0000-0000</div>
+      <div class="description">説明</div>
+      大人：<input type="text" name="person" class="person_text"><br>
+      子供：<input type="text" name="child_person" class="child_person_text"><br>
+      <input type="button" class="modal_store_detail" data-target="modal_content_01" value="受付する" />
+    </div>
+    <div class="store">
+      <div class="storeName">ルーク・スカイウォーカー</div>
+      <div class="map">地図</div>
+      <div class="open">営業時間 9:00〜21:00</div>
+      <div class="tel">000-0000-0000</div>
+      <div class="description">説明</div>
+      大人：<input type="text" name="person" class="person_text"><br>
+      子供：<input type="text" name="child_person" class="child_person_text"><br>
+      <input type="button" class="modal_store_detail" data-target="modal_content_02" value="受付する" />
+    </div>
+    <div class="store">
+      <div class="storeName">R2-D2</div>
+      <div class="map">地図</div>
+      <div class="open">営業時間 9:00〜21:00</div>
+      <div class="tel">000-0000-0000</div>
+      <div class="description">説明</div>
+      大人：<input type="text" name="person" class="person_text"><br>
+      子供：<input type="text" name="child_person" class="child_person_text"><br>
+      <input type="button" class="modal_store_detail" data-target="modal_content_03" value="受付する" />
+    </div>
+    <div class="store">
+      <div class="storeName">C3PO</div>
+      <div class="map">地図</div>
+      <div class="open">営業時間 9:00〜21:00</div>
+      <div class="tel">000-0000-0000</div>
+      <div class="description">説明</div>
+      大人：<input type="text" name="person" class="person_text"><br>
+      子供：<input type="text" name="child_person" class="child_person_text"><br>
+      <input type="button" class="modal_store_detail" data-target="modal_content_04" value="受付する" />
+    </div>
+  </div>
+
+</body>
+</html>
