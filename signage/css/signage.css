@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+body {
+	width: 100%;
+	height: 5000px;
+	padding: 0;
+	background-color: #e5f2ff;
+	/*effff7*/
+	/*eaf4ff*/
+	/*e5f2ff*/
+	/*ffffea*/
+}
+
+#printer_select_box {
+	width: 300px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.person_text, .child_person_text {
+	width: 60px;
+}
+
+#stores {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.store {
+	background-color: #fff;
+	width: 300px;
+	margin-top: 50px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 50px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	float: left;
+	box-sizing: border-box;
+	background-color: #ffffea;
+}
+
+@media (min-width: 1200px) {
+	#stores {
+		width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.store {
+		float: left;
+		width: 280px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+/*#modal_open {
+	width: 100%;
+}
+
+.button_accept {
+	float: right;
+}
+
+.stores:after {
+	content: "";
+	display: block;
+	clear: both;
+}*/
+
+/*.store {
+	float: left;
+	width: 33.3333%;
+	padding: 50px;
+	box-sizing: border-box;
+}*/
+
+.map {
+	float: left;
+	width: 50%;
+}
+
+.open {
+	float: right;
+	width: 50%;
+}
+
+.tel {
+	float: right;
+	width: 50%;
+	clear: both;
+	font-size: 0.8em;
+}
+
+.description {
+	clear: both;
+}

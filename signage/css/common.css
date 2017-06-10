@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'メイリオ',
+				 'Hiragino Kaku Gothic Pro',
+				 sans-serif;
+	background-color: #FCFAF2;
+	margin: 0;
+}
+
+.header {
+	padding-left: : 15px;
+	padding-right: : 15px;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #e7e7e7;
+  max-width: 100%;
+}
+
+.header:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* サイト名 */
+.brand {
+	color: #5e5e5e;
+	text-decoration: none;
+	padding: 15px;
+	font-size: 18px;
+	float: left;
+	width: auto;
+}
+
+/* お問い合わせ */
+.inquiry {
+	color: #fff;
+	background-color: #428bca;
+	text-decoration: none;
+	margin: 10px;
+	padding: 6px 12px;
+	font-size: 14px;
+	border-radius: 4px;
+	float: right;
+	width: auto;
+}
+
+.inquiry:hover {
+	opacity: 0.8;
+}
+
+/* タイトル */
+.title {
+	color: #888;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.title h1 {
+	margin: 0;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
+/* コンテンツ */
+.contentA {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content-1, .content-2 {
+	background-color: #fff;
+	width: 300px;
+	padding-top: 20px;
+	margin: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	float: left;
+}
+
+/* 画像 */
+.img {
+	text-align: center;
+}
+
+.content-1 img, .content-2 img {
+	width: 100px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 18px;
+}
+
+/* キャプション */
+.caption {
+	padding: 9px;
+}
+
+.caption h3 {
+	font-size: 24px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-weight: 500;
+}
+
+.caption p {
+	height: 100px;
+	font-size: 14px;
+}
+
+/* iTunesページ */
+.btn-iTunes {
+	color: #fff;
+	background-color: #428bca;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	margin: 5px;
+	padding: 6px 10px;
+	font-size: 14px;
+	border-radius: 4px;
+}
+
+.btn-iTunes:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+
+/* 768px 以上 */
+@media (min-width: 768px) {
+	.header-inner, .title, .contentA{
+		width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.content-1, .content-2 {
+		float: left;
+		width: 300px;
+	}
+
+	.title h1 {
+		margin: 0;
+		padding: 15px 25px;
+	}
+}
+
+/* 1190px 以上 */
+@media (min-width: 1190px) {
+	.header-inner, .title, .contentA {
+		width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.content-1, .content-2 {
+		float: left;
+		width: 300px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
